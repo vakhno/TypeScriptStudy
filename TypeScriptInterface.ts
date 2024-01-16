@@ -24,4 +24,20 @@ newUser.userCall && console.log(newUser.userCall());
 // non optional function
 console.log(newUser.showCoupon(5));
 
+// some interfaces can extends another one
+interface Admin extends User {
+	role: 'admin' | 'employee' | 'CEO';
+}
+
+const newAdmin: Admin = {
+	role: 'CEO',
+	name: 'Bob',
+	email: 'ceo@gmail.com',
+	userId: 22,
+	showCoupon: (couponNumber: number): string =>
+		`${newUser.name} is an Admin and has ${couponNumber} coupons`,
+};
+
+console.log(newAdmin);
+
 export {};
