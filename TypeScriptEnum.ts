@@ -4,12 +4,16 @@ enum spicificConstants {
 	ENUM2, // 1
 	ENUM3, // 2
 }
+const value = spicificConstants.ENUM2; // 1
+
 // here enum with custom values
 enum spicificConstants2 {
 	ENUM11 = 'VALUE-1', // VALUE-1
 	ENUM22 = 'VALUE-2', // VALUE-2
 	ENUM33 = 'VALUE-3', // VALUE-3
 }
+const valu2 = spicificConstants2.ENUM33; // VALUE-3
+
 // we can use our constants with values and without them
 enum spicificConstants3 {
 	ENUM111 = 'VALUE-1', // VALUE-1
@@ -19,6 +23,7 @@ enum spicificConstants3 {
 	ENUM555, // 6
 	ENUM666, //7
 }
+const value3 = spicificConstants3.ENUM444; // 5
 
 //but you should be careful, because to use constant without values, we should assign a number value to constant before empty constant
 enum spicificConstants4 {
